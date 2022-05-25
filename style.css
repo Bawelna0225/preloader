@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 22px;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #2e2e2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.preload {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1b1b1b;
+  transition: 400ms linear;
+  transition-delay: 500ms;
+}
+.preload .circle__1 {
+  border: 4px solid lime;
+  border-radius: 50%;
+  position: absolute;
+  filter: drop-shadow(0px 0px 5px lime);
+  width: 200px;
+  aspect-ratio: 1/1;
+  -webkit-animation: 1.2s spin linear infinite;
+          animation: 1.2s spin linear infinite;
+}
+.preload .circle__2 {
+  border: 4px solid lime;
+  border-radius: 50%;
+  position: absolute;
+  filter: drop-shadow(0px 0px 5px lime);
+  width: 150px;
+  aspect-ratio: 1/1;
+  -webkit-animation: 1s spin linear infinite;
+          animation: 1s spin linear infinite;
+}
+.preload .circle__3 {
+  border: 4px solid lime;
+  border-radius: 50%;
+  position: absolute;
+  filter: drop-shadow(0px 0px 5px lime);
+  width: 100px;
+  aspect-ratio: 1/1;
+  -webkit-animation: 0.8s spin linear infinite;
+          animation: 0.8s spin linear infinite;
+}
+.preload .circle__1 {
+  border-color: lime lime lime transparent;
+}
+.preload .circle__2 {
+  border-color: transparent transparent lime lime;
+}
+.preload .circle__3 {
+  border-color: lime transparent transparent lime;
+}
+.preload.finished {
+  transform: translateY(-100%);
+}
+.preload.finished .circle__1 {
+  opacity: 0;
+  transition: 400ms linear;
+}
+.preload.finished .circle__2 {
+  opacity: 0;
+  transition: 400ms linear;
+}
+.preload.finished .circle__3 {
+  opacity: 0;
+  transition: 400ms linear;
+}
+
+.content {
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 20px;
+  width: min(100% - 2rem, 1000px);
+  background-color: #252525;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.719);
+}
+.content h1 {
+  color: lime;
+  font-size: 1.4rem;
+}
+.content p {
+  margin-top: 30px;
+  color: #b8b8b8;
+}
+
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=style.css.map */
